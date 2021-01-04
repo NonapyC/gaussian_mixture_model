@@ -24,8 +24,6 @@ plt.style.use('ggplot')
 In [77]:
 
 ```python
-Dim_Observable = 2
-K_Observable = 3
 N = 250
 mean = np.array( [ [0.0, 4.0], [-5.0, -5.0], [5.0,-2.5] ])
 cov = np.array( [ [ [8.0, 0.0], [0.0, 8.0] ],  [ [4.0, -2.5], [-2.5, 4.0] ], [ [6.5, 4.0], [4.0, 6.5] ] ] )
@@ -74,7 +72,7 @@ print(data_x[0:5])
 In [82]:
 
 ```python
-for k in range(K_Observable):
+for k in range(3):
     k_id = np.where(data_y == k)
     plt.scatter( data_x[k_id,0], data_x[k_id,1] )
 ```
